@@ -1,6 +1,6 @@
 name: 'custom theme'
 type: theme
-description: 'B5 subtheme based on Bootstrap 5 theme.'
+description: 'custom theme based on Bootstrap 5 theme.'
 core_version_requirement: '^9.4 || ^10'
 'base theme': bootstrap5
 libraries:
