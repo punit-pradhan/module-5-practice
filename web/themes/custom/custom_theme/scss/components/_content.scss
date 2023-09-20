@@ -1,0 +1,19 @@
+@use "../partial-files/variables" as *;
+
+.block-page-title-block {
+  h1 {
+    color: $title_color;
+  }
+}
+
+.block-local-tasks-block {
+  nav {
+    ul {
+      li {
+        a {
+          color: $nav_color;
+        }
+      }
+    }
+  }
+}
