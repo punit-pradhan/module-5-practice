@@ -12,8 +12,8 @@ _core:
   default_config_hash: Fm7sDs2U1u99MaVOZEZqa-QOJrrUiQMWJb1jMozYO48
 id: custom_theme_main_navigation
 theme: custom_theme
-region: top_header
-weight: 0
+region: primary_menu
+weight: -14
 provider: null
 plugin: 'system_menu_block:main'
 settings:

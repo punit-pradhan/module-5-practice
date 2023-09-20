@@ -12,8 +12,8 @@ _core:
   default_config_hash: YRZjNp4d68NjJAVhrrUrXKwpV12i7OFWg4MY6Bsd0mw
 id: custom_theme_account_menu
 theme: custom_theme
-region: top_header
-weight: -7
+region: header
+weight: -6
 provider: null
 plugin: 'system_menu_block:account'
 settings:
