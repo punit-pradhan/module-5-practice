@@ -1,8 +1,15 @@
-@use "../partial-files/variables" as *;
+@use "../partial-files/importers" as *;
 
+.navbar-brand {
+  justify-content: center;
+  margin: 10px 0;
+  a.site-title {
+    color: $red_color;
+  }
+}
 .block-page-title-block {
   h1 {
-    color: $title_color;
+    color: $red_color;
   }
 }
 
@@ -11,8 +18,27 @@
     ul {
       li {
         a {
-          color: $nav_color;
+          color: $red_color;
         }
+      }
+    }
+  }
+}
+
+.btn {
+  border: var(--bs-btn-border-width) solid $red_color;
+  background-color: $red_color;
+}
+
+.punit{
+  color: tomato;
+}
+
+.views-displays {
+  .tabs {
+    .action-list {
+      input.form-submit {
+        color: black;
       }
     }
   }

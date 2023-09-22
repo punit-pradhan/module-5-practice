@@ -12,7 +12,7 @@ _core:
   default_config_hash: xBR1vgpnqSUW4pA2LC3rfhu27FQUox9zZEYsdAFM2Sg
 id: custom_theme_footer
 theme: custom_theme
-region: top_header
+region: footer_first
 weight: -6
 provider: null
 plugin: 'system_menu_block:footer'

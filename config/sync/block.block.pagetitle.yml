@@ -1,0 +1,18 @@
+uuid: 6250c51a-2b1d-420d-8481-17e0b15ef803
+langcode: en
+status: false
+dependencies:
+  theme:
+    - custom_theme
+id: pagetitle
+theme: custom_theme
+region: top_header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

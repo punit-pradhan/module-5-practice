@@ -1,7 +1,28 @@
+.navbar-brand {
+  justify-content: center;
+  margin: 10px 0;
+}
+.navbar-brand a.site-title {
+  color: tomato;
+}
+
 .block-page-title-block h1 {
-  color: red;
+  color: tomato;
 }
 
 .block-local-tasks-block nav ul li a {
-  color: purple;
+  color: tomato;
+}
+
+.btn {
+  border: var(--bs-btn-border-width) solid tomato;
+  background-color: tomato;
+}
+
+.punit {
+  color: tomato;
+}
+
+.views-displays .tabs .action-list input.form-submit {
+  color: black;
 }
