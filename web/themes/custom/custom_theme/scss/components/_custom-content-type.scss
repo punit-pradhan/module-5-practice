@@ -1,0 +1,22 @@
+// Import styles from "../partials/importers"
+@use "./partial-files/importers" as *;
+
+article {
+  background-color: $gray-color;
+  margin-bottom: 20px;
+  h2 {
+    a {
+      text-decoration: none;
+      color: $red_color;
+    }
+  }
+  .field--type-image {
+    .field__label {
+      margin-bottom: 10px;
+    }
+    .field__item {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

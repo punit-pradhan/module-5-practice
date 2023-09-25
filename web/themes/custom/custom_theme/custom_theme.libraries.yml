@@ -2,3 +2,8 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+
+custom-content:
+  css:
+    theme:
+      css/custom-content-type.css: {}
