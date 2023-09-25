@@ -1,5 +1,5 @@
 // Import styles from "../partials/importers"
-@use "../partial-files/importers" as *;
+@use "./partial-files/importers" as *;
 
 article {
   background-color: $gray-color;

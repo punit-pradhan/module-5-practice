@@ -1,0 +1,15 @@
+article {
+  background-color: rgb(188, 188, 188);
+  margin-bottom: 20px;
+}
+article h2 a {
+  text-decoration: none;
+  color: tomato;
+}
+article .field--type-image .field__label {
+  margin-bottom: 10px;
+}
+article .field--type-image .field__item {
+  display: flex;
+  justify-content: center;
+}
