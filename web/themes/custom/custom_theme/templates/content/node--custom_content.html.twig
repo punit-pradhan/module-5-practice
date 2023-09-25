@@ -78,29 +78,46 @@
   ]
 %}
 {{ attach_library('custom_theme/custom-content') }}
-<article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-<h1>its a custom template</h1>
-  {% if display_submitted %}
-    <footer class="node__meta">
-      {{ author_picture }}  
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
+<article{{attributes}}>
 
-<div{{ content_attributes.addClass('node__content') }}>
-  {{ content.body|render|striptags|trim|trans }}
-</div>
+	{{ title_prefix }}
+	{% if label and not page %}
+		<h2{{title_attributes}}>
+			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+		</h2>
+	{% endif %}
+	{{ title_suffix }}
 
 
+	<div{{content_attributes}}>
+		<div {{ create_attribute().addClass('content row mb-3') }}>
+			<div {{ create_attribute().addClass('content-item col-4') }}>
+				<div {{ create_attribute().addClass('content-item__image') }}>
+					{{content.field_image.0}}
+				</div>
+			</div>
+			<div {{ create_attribute().addClass('content-item col-8 px-5') }}>
+				<div {{ create_attribute().addClass('content-item__content') }}>
+					<h4>body</h4>
+					{% set conBody %}
+					<p>{{ content.body |render}} </p>
+					{% endset %}
+					{{ conBody|striptags|trim|trans}}
+					{# {% spaceless %}
+					<p> {{ content.body|render|striptags|trim|trans }}</p>
+					{% endspaceless %} #}
+				</div>
+				<div {{ create_attribute().addClass('content-item__author') }}>
+					{% if display_submitted %}
+						<div{{author_attributes.addClass('content__submitted')}}>
+							{% trans %}Submitted by
+							{{ author_name }}{% endtrans %}
+							{{ metadata }}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
 </article>

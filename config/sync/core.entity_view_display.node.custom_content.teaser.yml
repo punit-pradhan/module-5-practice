@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.custom_content.field_image
     - node.type.custom_content
   module:
+    - image
     - text
     - user
 id: node.custom_content.teaser
@@ -21,12 +22,22 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 101
+    weight: 2
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
-hidden:
-  field_image: true
+hidden: {  }
