@@ -26,3 +26,38 @@
 .views-displays .tabs .action-list input.form-submit {
   color: black;
 }
+
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+
+.dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+
+.dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
+}
+
+/* Additional styles for the Navbar */
+.navbar {
+  background-color: #007bff; /* Set the background color for the Navbar */
+}
+
+.navbar-nav .nav-link {
+  color: #ce7272; /* Set the text color for Navbar links */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  background-color: #0056b3; /* Set the background color for active Navbar links */
+}
+
+/* Add any other Navbar styles as needed */

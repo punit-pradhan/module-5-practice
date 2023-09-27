@@ -1,0 +1,26 @@
+{{ attach_library('custom_theme/custom-to-do-list') }}
+
+<article{{ attributes }}>
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  <div{{ content_attributes.addClass('custom-to-do-body') }}>
+    <div class="custom-to-do">
+      <div class="custom-to-do-input">
+        <input type="text" name="custom-to-do-item" id="custom-to-do-list" class="custom-to-do__input" placeholder="Add item TO DO !">
+        <button type="submit" id="custom-to-do-submit" class="custom-to-do__submit-button btn btn-primary">Add TO DO</button>
+        <button type="submit" id="custom-to-do-clear" class="custom-to-do__clear-button btn btn-danger">Clear All</button>
+      </div>
+      <div class="custom-to-do-list-item" id="custom-saved-item">
+        <p id="custom-to-do-list-empty">You don't have anything in your TO DO List!</p>
+        <ol class="custom-to-do-list-item__saved-item" id="custom-saved-item-ul"></ol>
+      </div>
+    </div>
+  </div>
+
+</article>

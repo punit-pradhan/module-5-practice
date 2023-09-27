@@ -1,0 +1,74 @@
+@use "../partial-files/importers" as *;
+
+#block-custom-theme-local-tasks {
+  display: none;
+}
+
+/* Style the to-do list container */
+.custom-to-do-body {
+    padding: 20px;
+  }
+  
+  /* Style the to-do input section */
+  .custom-to-do-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .custom-to-do__input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .custom-to-do__submit-button {
+    background-color: $red_color;
+    color: $white_color;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  
+    &:hover {
+      background-color: darken($red_color, 10%);
+    }
+  }
+  
+  .custom-to-do__clear-button {
+    background-color: $purple_color; 
+    color: $white_color;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  
+    &:hover {
+      background-color: darken($purple_color, 10%);
+    }
+  }
+  
+  /* Style the to-do list items */
+  .custom-to-do-list-item {
+    ol {
+      list-style-type: circle; 
+      padding: 0;
+    }
+  
+    li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+  }
+  
+  #custom-to-do-list-empty {
+    font-size: 18px;
+    color: gray;
+    display: none;
+  }
+  
