@@ -5,25 +5,24 @@
 /* Style the to-do list container */
 .custom-to-do-body {
   padding: 20px;
+  /* Style the to-do input section */
 }
-
-/* Style the to-do input section */
-.custom-to-do-input {
+.custom-to-do-body .custom-to-do-input {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  /* Style the to-do input field */
+  /* Style the to-do button */
 }
-
-.custom-to-do__input {
+.custom-to-do-body .custom-to-do-input__input {
   flex-grow: 1;
   padding: 10px;
-  border: 1px solid gray;
+  border: 1px solid rgb(188, 188, 188);
   border-radius: 4px;
   margin-right: 10px;
   font-size: 16px;
 }
-
-.custom-to-do__submit-button {
+.custom-to-do-body .custom-to-do-input__submit-button, .custom-to-do-body .custom-to-do-input__clear-button {
   background-color: tomato;
   color: white;
   border: none;
@@ -32,21 +31,14 @@
   cursor: pointer;
   font-size: 16px;
 }
-.custom-to-do__submit-button:hover {
+.custom-to-do-body .custom-to-do-input__submit-button:hover, .custom-to-do-body .custom-to-do-input__clear-button:hover {
   background-color: #ff3814;
 }
-
-.custom-to-do__clear-button {
-  background-color: purple;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
+.custom-to-do-body .custom-to-do-input__clear-button {
+  background-color: purple !important;
 }
-.custom-to-do__clear-button:hover {
-  background-color: #4d004d;
+.custom-to-do-body .custom-to-do-input__clear-button:hover {
+  background-color: #4d004d !important;
 }
 
 /* Style the to-do list items */
@@ -61,6 +53,6 @@
 
 #custom-to-do-list-empty {
   font-size: 18px;
-  color: gray;
+  color: rgb(188, 188, 188);
   display: none;
 }
