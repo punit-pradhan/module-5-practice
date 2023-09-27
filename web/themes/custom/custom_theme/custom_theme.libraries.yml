@@ -2,3 +2,21 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+  js:
+    js/custom.js: {}
+  dependencies:
+    - core/jquery
+
+custom-content:
+  css:
+    theme:
+      css/custom-content-type.css: {}
+
+to-do-list:
+  css:
+    theme:
+      css/to-do-list.css: {}
+  js:
+    js/to-do.js: {}
+  dependencies:
+    - core/jquery

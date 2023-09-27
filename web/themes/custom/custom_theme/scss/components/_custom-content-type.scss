@@ -1,0 +1,54 @@
+// Import styles from "../partials/importers"
+@use "../partial-files/importers" as *;
+
+.content {
+  &-item {
+    &:first-child {
+      border-right: 5px solid $red_color;
+    }
+
+    &__image {
+      width: 300px;
+      padding: 10px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 5px solid $red_color;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &__content {
+      h4 {
+        font-size: 25px;
+        color: $purple_color;
+      }
+
+      p {
+        text-align: justify;
+        color: $purple_color;
+      }
+    }
+
+    &__author {
+      margin-top: 20px;
+      color: $red_color;
+    }
+  }
+}
+
+.contextual-region {
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 3rem;
+    a {
+      text-decoration: none;
+      .field--name-title {
+        font-size: 40px;
+        color: $red_color;
+        text-decoration: none;
+      }
+    }
+  }
+}

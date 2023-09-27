@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Custom theme override for a Bootstrap Navbar with nested dropdowns.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link URL, instance of \Drupal\Core\Url.
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      {% for item in items %}
+        {{ _self.render_menu_item(item) }}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
+{% macro render_menu_item(item) %}
+  {% set has_children = item.below is not empty %}
+  <li class="nav-item{{ has_children ? ' dropdown show' : '' }}">
+    {% if has_children %}
+      <a class="nav-link dropdown-toggle{% if item.is_expanded %} show{% endif %}" href="{{ item.url }}" role="button" data-bs-toggle="dropdown" aria-expanded="{{ item.is_expanded ? 'true' : 'false' }}">
+        {{ item.title }}
+      </a>
+      <ul class="dropdown-menu{% if item.is_expanded %} show{% endif %}">
+        {% for sub_item in item.below %}
+          {{ _self.render_menu_item(sub_item) }}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
+    {% endif %}
+  </li>
+{% endmacro %}
