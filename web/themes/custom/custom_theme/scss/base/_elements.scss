@@ -1,0 +1,7 @@
+@use '../partial-files/importers' as *;
+
+:root {
+  --color-red: #{$red_color};
+  --color-green: #{$green_color};
+  --color-blue: #{$blue_color};
+}

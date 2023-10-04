@@ -1,0 +1,38 @@
+.content-item:first-child {
+  border-right: 5px solid tomato;
+}
+.content-item__image {
+  width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 5px solid tomato;
+}
+.content-item__image img {
+  border-radius: 50%;
+}
+.content-item__content h4 {
+  font-size: 25px;
+  color: purple;
+}
+.content-item__content p {
+  text-align: justify;
+  color: purple;
+}
+.content-item__author {
+  margin-top: 20px;
+  color: tomato;
+}
+
+.contextual-region h2 {
+  margin-top: 10px;
+  margin-bottom: 3rem;
+}
+.contextual-region h2 a {
+  text-decoration: none;
+}
+.contextual-region h2 a .field--name-title {
+  font-size: 40px;
+  color: tomato;
+  text-decoration: none;
+}

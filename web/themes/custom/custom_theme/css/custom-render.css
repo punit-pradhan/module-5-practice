@@ -1,0 +1,23 @@
+:root {
+  --color-red: tomato;
+  --color-green: green;
+  --color-blue: blue;
+}
+
+.custom-render-color__item {
+  text-transform: uppercase;
+  font-weight: bold;
+  list-style: none;
+}
+.custom-render-color__item li {
+  display: inline-block;
+}
+.custom-render-color__item__red {
+  color: var(--color-red);
+}
+.custom-render-color__item__green {
+  color: var(--color-green);
+}
+.custom-render-color__item__blue {
+  color: var(--color-blue);
+}
