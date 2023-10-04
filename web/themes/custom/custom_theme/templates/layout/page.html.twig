@@ -69,86 +69,85 @@ set footer_classes = ' ' ~
 %}
 
 <header>
-  {{ page.top_header }}
+	{{ page.top_header }}
 
-  {% if page.primary_menu or page.secondary_menu or page.top_header_form or page.header or page.header_form %}
-  <nav class="{{ nav_classes }}">
-    <div class="{{ b5_top_container }} d-flex">
-      {{ page.top_header_form }}
-      {{ page.primary_menu }}
-      {{ page.secondary_menu }}
-      {{ page.header }}
+	{% if page.primary_menu or page.secondary_menu or page.top_header_form or page.header or page.header_form %}
+		<nav class="{{ nav_classes }}">
+			<div class="{{ b5_top_container }} d-flex">
+				{{ page.top_header_form }}
+				{{ page.primary_menu }}
+				{{ page.secondary_menu }}
+				{{ page.header }}
 
-      {% if page.header_form %}
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+				{% if page.header_form %}
+					<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-        <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
-          {{ page.header_form }}
-        </div>
-      {% endif %}
-    </div>
-  </nav>
-  {% endif %}
+					<div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
+						{{ page.header_form }}
+					</div>
+				{% endif %}
+			</div>
+		</nav>
+	{% endif %}
 
 </header>
 
 <main role="main">
-  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+	<a id="main-content" tabindex="-1"></a>
+	{# link is in html.html.twig #}
 
-  {%
+	{%
   set sidebar_first_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-sm-6 col-lg-3' : 'col-12 col-lg-3'
   %}
 
-  {%
+	{%
   set sidebar_second_classes = (page.sidebar_first or page.breadcrumb or page.featured_top or page.highlighted or page.sidebar_second) ? 'col-12 col-lg-3' : 'col-12 col-lg-3'
   %}
 
-  {%
+	{%
   set content_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-lg-6' : ((page.sidebar_first or page.sidebar_second) ? 'col-12 col-lg-9' : 'col-12' )
    %}
 
-  <div class="{{ b5_top_container }}">
-    {% if page.page_top %}
-      {{ page.page_top }}
-    {% endif %}
-    <div class="row g-0">
-      {% if page.sidebar_first %}
-        <div class="order-2 order-lg-1 {{ sidebar_first_classes }}">
-          {{ page.sidebar_first }}
-          {{ page.featured_bottom_first }}
-          {{ page.featured_bottom_second }}
-          {{ page.featured_bottom_third }}
-        </div>
-      {% endif %}
-      <div class="order-1 order-lg-2 {{ content_classes }}">
-        {{ page.content }}
-      </div>
-      {% if page.sidebar_second %}
-        <div class="order-3 {{ sidebar_second_classes }}">
-          {{ page.sidebar_second }}
-          {{ page.breadcrumb }}
-          {{ page.featured_top }}
-          {{ page.highlighted }}
-        </div>
-      {% endif %}
-    </div>
-  </div>
+	<div class="{{ b5_top_container }}">
+		{% if page.page_top %}
+			{{ page.page_top }}
+		{% endif %}
+		<div class="row g-0">
+			{% if page.sidebar_first %}
+				<div class="order-2 order-lg-1 {{ sidebar_first_classes }}">
+					{{ page.sidebar_first }}
+					{{ page.featured_bottom_first }}
+					{{ page.featured_bottom_second }}
+					{{ page.featured_bottom_third }}
+				</div>
+			{% endif %}
+			<div class="order-1 order-lg-2 {{ content_classes }}">
+				{{ page.content }}
+			</div>
+			{% if page.sidebar_second %}
+				<div class="order-3 {{ sidebar_second_classes }}">
+					{{ page.sidebar_second }}
+					{{ page.breadcrumb }}
+					{{ page.featured_top }}
+					{{ page.highlighted }}
+				</div>
+			{% endif %}
+		</div>
+	</div>
 
 </main>
 
 {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth or page.footer_fifth %}
-<footer class="mt-auto {{ footer_classes }}">
-  <div class="{{ b5_top_container }}">
-    {{ page.footer_first }}
-    {{ page.footer_second }}
-    {{ page.footer_third }}
-    {{ page.footer_fourth }}
-    {{ page.footer_fifth }}
-    {{ page.page_bottom }}
-  </div>
-</footer>
+	<footer class="mt-auto {{ footer_classes }}">
+		<div class="{{ b5_top_container }}">
+			{{ page.footer_first }}
+			{{ page.footer_second }}
+			{{ page.footer_third }}
+			{{ page.footer_fourth }}
+			{{ page.footer_fifth }}
+			{{ page.page_bottom }}
+		</div>
+	</footer>
 {% endif %}
