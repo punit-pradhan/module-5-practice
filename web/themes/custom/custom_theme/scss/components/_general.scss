@@ -1,35 +1,8 @@
-.navbar-brand {
-  justify-content: center;
-  margin: 10px 0;
-}
-.navbar-brand a.site-title {
-  color: tomato;
-}
-
-.block-page-title-block h1 {
-  color: tomato;
-}
-
-.block-local-tasks-block nav ul li a {
-  color: tomato;
-}
-
-.btn {
-  border: var(--bs-btn-border-width) solid tomato;
-  background-color: tomato;
-}
-
-.punit {
-  color: tomato;
-}
-
-.views-displays .tabs .action-list input.form-submit {
-  color: black;
-}
+@use "../partial-files/importers" as *;
 
 /* Basic menu styling */
 .navbar {
-  background-color: #333;
+  background-color: #333; 
 }
 
 .navbar ul {
@@ -41,13 +14,13 @@
 .navbar li {
   display: inline-block;
   position: relative;
-  margin-right: 20px;
+  margin-right: 20px; 
 }
 
 .navbar a {
   text-decoration: none;
-  color: #fff;
-  padding: 10px 15px;
+  color: #fff; 
+  padding: 10px 15px; 
   display: block;
 }
 
@@ -59,10 +32,10 @@
 .navbar ul ul {
   display: none;
   position: absolute;
-  background-color: #444;
+  background-color: #444; 
   top: 100%;
   left: 0;
-  width: 200px;
+  width: 200px; 
   border-radius: 0;
 }
 
@@ -76,3 +49,5 @@
 .navbar ul ul a {
   padding: 10px;
 }
+
+  

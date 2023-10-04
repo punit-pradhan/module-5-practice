@@ -1,0 +1,45 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{{ attach_library('bootstrap5/node') }}
+<article{{attributes.addClass(classes)}}>
+	{{ title_prefix }}
+	{% if label and not page %}
+		<h2{{title_attributes}}>
+			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+		</h2>
+	{% endif %}
+	{{ title_suffix }}
+
+	{% if display_submitted %}
+		<footer class="node__meta">
+			{{ author_picture }}
+			<div{{author_attributes.addClass('node__submitted')}}>
+				{% trans %}Submitted by
+				{{ author_name }}
+				on
+				{{ date }}{% endtrans %}
+				{{ metadata }}
+			</div>
+		</footer>
+	{% endif %}
+	{# <h2> its working correct</h2> #}
+	{# Print the canonical URL of the current node #}
+	{# {{ path('entity.node.canonical', {'node': node.id}) }} #}
+		{% if colors %}
+			<div class="custom-render-color"> <ul class="custom-render-color__item">
+				{% for color in colors %}
+					<li class="custom-render-color__item__{{ color }}">{{ color }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	{% endif %}
+</article>
