@@ -2,10 +2,10 @@ global-styling:
   css:
     theme:
       css/style.css: {}
-  js:
-    js/custom.js: {}
-  dependencies:
-    - core/jquery
+  # js:
+  #   js/custom.js: {}
+  # dependencies:
+  #   - core/jquery
 
 custom-content:
   css:
@@ -20,3 +20,8 @@ to-do-list:
     js/to-do.js: {}
   dependencies:
     - core/jquery
+
+custom-render:
+  css:
+    theme:
+      css/custom-render.css: {}

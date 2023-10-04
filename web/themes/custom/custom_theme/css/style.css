@@ -27,37 +27,52 @@
   color: black;
 }
 
-.dropdown-menu li {
+/* Basic menu styling */
+.navbar {
+  background-color: #333;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
   position: relative;
+  margin-right: 20px;
 }
 
-.dropdown-menu .dropdown-submenu {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: -7px;
-}
-
-.dropdown-menu .dropdown-submenu-left {
-  right: 100%;
-  left: auto;
-}
-
-.dropdown-menu > li:hover > .dropdown-submenu {
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
   display: block;
 }
 
-/* Additional styles for the Navbar */
-.navbar {
-  background-color: #007bff; /* Set the background color for the Navbar */
+.navbar li:hover > ul {
+  display: block;
 }
 
-.navbar-nav .nav-link {
-  color: #ce7272; /* Set the text color for Navbar links */
+/* Submenu styles */
+.navbar ul ul {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  border-radius: 0;
 }
 
-.navbar-nav .nav-item.active .nav-link {
-  background-color: #0056b3; /* Set the background color for active Navbar links */
+.navbar ul ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
-/* Add any other Navbar styles as needed */
+/* Adjust submenu link styles as needed */
+.navbar ul ul a {
+  padding: 10px;
+}
